@@ -1,0 +1,320 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #2c3e50;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+p{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.modal{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+.modal-content{
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+}
+.close{
+    color: #aaa;
+    float: right;
+    font-size: 14px;
+    font-weight: bold;
+}
+.close:hover, .close:focus{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+.header{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 15%;
+    background-color: #2c3e50;
+    /* background-image: url("ChatHeaderBckgrd.jpg");
+    background-repeat: no-repeat;
+    background-position: absolute;
+    background-position-x: 63%; */
+}
+.header img{
+    position: absolute;
+    left: 5%;
+    top: 10%;
+}
+.header p{
+    position: absolute; 
+    color: #ecf0f1;
+    text-shadow: 1px 1px black;
+    font-size: 2rem;
+    bottom: 3%;
+    left: 5%;
+}
+
+.container{
+    display: block;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    width: 95%;
+    height: 70%;
+    background-color: #dbe6ed;
+}
+.form-group{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+}
+.form-group div.inputArea{
+    position: absolute;
+    left: 2%;
+    bottom: 10%;
+    width: 96%;
+    height: 70%;
+    background-color: #ecf0f1;
+    resize: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* box-shadow: inset 2px 2px 2px 0px #dddddd; */
+    text-align: left;
+    /* padding: 2%; */
+    overflow-x: hidden;
+        overflow-y: hidden;
+    /* box-shadow: 0px 0px 10px 0px grey; */
+    border: none;
+    box-shadow: inset 0px 0px 3px black;
+
+}
+.form-group .inputArea textarea.form-control{
+    position: absolute;
+    display: inline-block;
+    margin: 1%;
+    width: 90%;
+    top: 0;
+    resize: none;
+    background-color: transparent;
+    border: none;
+}
+.form-group textarea.form-control:focus{
+    background-color: transparent;
+    outline: none;
+}
+.form-group label{
+    position: absolute;
+    font-weight: bold;
+    left: 2%;
+    top: 0;
+}
+.form-group #send{
+    position: absolute;
+    right: 1%;
+    bottom: 1%;
+    font-size: 2rem;
+    color: #24384e;
+    opacity: 0.6;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* border: 1% solid black; */
+}
+.form-group #send:hover{
+    opacity: 1.0;
+    transition: 0.3s;
+}
+.chatbox{
+    position: absolute;
+    top: 0;
+    height: 80%;
+    width: 100%;
+    background-color: #dbe6ed;
+}
+.chatbox .chat{
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 96%;
+    height: 96%;
+    background-color: #ecf0f1;
+    resize: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    /* box-shadow: inset 2px 2px 2px 0px #dddddd; */
+    text-align: left;
+    /* padding: 2%; */
+    overflow-y: hidden;
+    padding: 0;
+    border: 1px solid grey;
+}
+.sidebar{
+    position: absolute;
+    top: 15%;
+    height: 70%;
+    width: 5%;
+    background-color: #2c3e50;
+}
+.sidebar ul.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 2rem;
+    color: #ecf0f1;
+    /* text-shadow: 1px 1px black; */
+    text-align: center;
+}
+.sidebar ul.menu li a{
+    display: block;
+    color: #7c93aa;
+    text-decoration: none;
+    /* background-color: lightgrey; */
+    /* background-image: url("ChatMenuBack.png");
+    background-repeat: no-repeat; */
+    padding-top: 10%;
+    /* width: 100%; */
+    padding-bottom: 10%;
+    border-bottom: 1px solid #2c3e50;
+    /* border-right: 1px solid #2c3e50; */
+}
+.sidebar ul.menu li a:hover{
+    /* background-color:  whitesmoke; */
+    color: #84d5a6;
+    /* text-shadow: 1px 1px black;  */
+    transition: 0.3s;
+}
+.footer{
+    position: absolute;
+    bottom: 0;
+    height: 15%;
+    width: 100%;
+    background-color: #2c3e50;
+}
+.footer #rights{
+    display: block;
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    text-align: center;
+    font-size: 1rem;
+    color: #ecf0f1;
+    opacity: 0.3;
+         text-shadow: 1px 1px black; 
+
+}
+#scrollbar{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    height: 96%;
+    width: 98%;
+    direction: ltr;
+    overflow-y: auto;
+}
+.msgList{
+    display: block;
+    position: absolute;
+    top: 0;
+    height: 96%;
+    min-width: 30%;
+    max-width: 80%;
+    direction: ltr;
+    /* width: 98%; */
+}
+.msgList .messege{
+    /* display: inline-block; */
+    /* display: block; */
+    float: left;
+    clear: left;
+    padding: 2%; 
+    background-color: #ecf0f1;
+    /* border: 1px solid grey; */
+    border-radius: 3px;
+        box-shadow: 0px 0px 2px #b1b9bf;
+
+    /* box-shadow: 1px 1px 1px 1px #8ac3a2; */
+     margin: 1%; 
+    font-size: 0;
+    min-width: 30%;
+
+}
+
+.msgList .messege .user{
+    color: #003818;
+    font-style: italic;
+    font-size: 1rem;
+}
+.msgList .messege .userMsg{
+    display: inline-block;
+    font-size: 1.2rem;
+    padding: 2%;
+    max-width: 80%;
+}
+
+ @media screen and (max-width: 635px) {
+    .header{
+        display: none;
+        height: 0;
+    }
+    .container{
+        top: 2%;
+    }
+    .sidebar{
+        display: none;
+    }
+    .footer{
+        display: none;
+    }
+} 

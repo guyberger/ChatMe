@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="ChatMe.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    <script src="ChatMe.js"></script>
+    <title>ChatMe</title>
+</head>
+<body>
+    
+    <div class="header">
+        <img src="ChatHeaderBack.png" alt="london"></img>
+        <p>Welcome to ChatMe, start chatting...</p>
+    </div>
+    <div class="container">
+            <div class="form-group">
+                <!-- <form action="" method="post" target=""> -->
+                <!-- <label for="input"><b>You:</b></label><br> -->
+                <div class="inputArea">
+                    <textarea class="form-control" id="input" rows="4" name="input" placeholder="Write something..."></textarea>
+                    <!-- <div class="dInput"></div> -->
+                    <!-- <button type="submit" onclick="printMsg()" id="send"> -->
+                        <i class="fa fa-angle-double-right" onclick="sendMsg()" id="send"></i>
+                    <!-- </buttom> -->
+                </div>
+                <!-- </form> -->
+            </div>
+            <div class="chatbox">
+                <div id="scrollbar">
+                <!-- <div class="chat" id="chat" name="chat window"> -->
+                    <ul class="msgList" id="msgList">
+                    </ul>
+                <!-- </div> -->
+                </div>
+            </div>
+    </div>
+    <div class="sidebar">
+        <ul class="menu">
+            <li><a href="" title="Home"><i class="fa fa-home"></i></a></li>
+            <li><a href="" title="Profile"><i class="fa fa-user"></i></a></li>
+            <li><a href="" title="About us"><i class="fa fa-info"></i></a></li>
+            <li><a href="" title="Settings"><i class="fa fa-cog"></i></a></li>
+                <!-- <a href="">Home</a></li> -->
+            <!-- <li><a href="">Profile</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Settings</a></li> -->
+        </ul>
+    </div>
+    <div class="footer">
+        <p id="rights">@2017 PICKLERICK</p>
+    </div>
+
+
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <button onclick="closeModal()" class="close">&times;</button>
+                <p>Enter nickname:</p><br>
+                <input type="text" name="nickname" id="nickname"><br><br>
+                <button type="button" onclick="storeNick()">Submit</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="ChatMe.js"></script> 
+</body>
+</html>
